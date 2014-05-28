@@ -1,0 +1,7 @@
+#files to ignore
+.metadata/
+*/.classpath
+*/.project
+*/.settings/
+*/bin/
+*.swp
