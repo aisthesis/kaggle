@@ -1,7 +1,9 @@
 #files to ignore
+#Various artifacts
 .metadata/
 */.classpath
 */.project
 */.settings/
 */bin/
 *.swp
+**/._*
