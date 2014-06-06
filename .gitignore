@@ -7,3 +7,7 @@
 */bin/
 *.swp
 **/._*
+
+# Oversize files (must be created locally)
+DigitRecognizer/data/test.mat
+DigitRecognizer/data/train.mat
