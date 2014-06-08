@@ -1,4 +1,4 @@
-function p = predictOneVsAll(all_theta, X)
+function p = predictOneVsAll(all_theta, X, labelSet)
 %PREDICT Predict the label for a trained one-vs-all classifier. The labels 
 %are in the range 1..K, where K = size(all_theta, 1). 
 %  p = PREDICTONEVSALL(all_theta, X) will return a vector of predictions
@@ -10,6 +10,9 @@ function p = predictOneVsAll(all_theta, X)
 
 m = size(X, 1);
 num_labels = size(all_theta, 1);
+if !exist('labelSet', 'var')
+    labelSet = 1:num_labels
+endif
 
 % You need to return the following variables correctly 
 p = zeros(size(X, 1), 1);
@@ -30,13 +33,7 @@ X = [ones(m, 1) X];
 %       for each row.
 %       
 
-[~, p] = max(sigmoid(X * all_theta'), [], 2);
-
-
-
-
+p = labelSet(nthargout(2, @max, sigmoid(X * all_theta'), [], 2));
 
 % =========================================================================
-
-
 end
