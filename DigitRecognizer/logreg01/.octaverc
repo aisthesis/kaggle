@@ -1,0 +1,4 @@
+# Runs whenever Octave is started from the current directory
+setenv("DATA_PATH", "../data/")
+addpath("../../lib/octave")
+addpath("../lib")
