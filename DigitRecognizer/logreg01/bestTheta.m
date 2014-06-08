@@ -23,7 +23,12 @@ lambda = bestLambda(maxIter);
 labelSet = [0:9]';
 
 load(trainFile);
-all_theta = oneVsAll(Xtrain, ytrain, lambdas(i), labelSet, maxIter);
+printf("Optimal lambda: %f\n", lambda);
+if exist('OCTAVE_VERSION')
+    fflush(stdout);
+endif
+
+all_theta = oneVsAll(Xtrain, ytrain, lambda, labelSet, maxIter);
 
 save("-mat-binary", outFile, "all_theta");
 end
