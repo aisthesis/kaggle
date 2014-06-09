@@ -12,7 +12,7 @@
 ## Author mdf
 ## Since 2014-06-08
 
-function best = bestLambda(maxIter = 50)
+function best = bestLambda(maxIter = 64)
 
 lambdas = [0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1, 3, 10];
 bestIndex = 1;
