@@ -3,3 +3,6 @@ libsvm-3.18/svm-predict
 libsvm-3.18/svm-scale
 libsvm-3.18/svm-train
 libsvm-3.18/svm.o
+libsvm-3.18/heart_scale.model
+libsvm-3.18/matlab/*.mex
+libsvm-3.18/matlab/*.o
